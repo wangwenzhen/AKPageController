@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  AKPageController
+//
+//  Created by Little.Daddly on 2019/9/3.
+//  Copyright © 2019 wangwz. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <YYModel/YYModel.h>
+#import "BeautyKitHeader.h"
+#import <YYCategories/YYCategories.h>
+#import <Masonry/Masonry.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <ReactiveObjC/RACEXTScope.h>
+#import <MBProgressHUD.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/FLAnimatedImageView+WebCache.h>
+#endif /* PrefixHeader_pch */

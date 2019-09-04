@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'AKPageController' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+
+  pod 'YYCategories','1.0.4'
+  pod 'ReactiveObjC','3.1.1'
+  pod 'Masonry','1.1.0'
+  pod 'SDWebImage','4.4.6'
+  pod 'SDWebImage/GIF', '4.4.6'
+  pod 'MBProgressHUD', '1.1.0'
+  pod 'YYModel','1.0.4'
+  pod 'YYText','1.0.7'
+  pod 'YYCache','1.0.4'
+  pod 'MJRefresh','3.2.0'
+  # Pods for AKPageController
+
+  target 'AKPageControllerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'AKPageControllerUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

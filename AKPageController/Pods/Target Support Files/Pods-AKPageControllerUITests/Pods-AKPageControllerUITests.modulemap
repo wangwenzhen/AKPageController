@@ -1,0 +1,6 @@
+framework module Pods_AKPageControllerUITests {
+  umbrella header "Pods-AKPageControllerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
