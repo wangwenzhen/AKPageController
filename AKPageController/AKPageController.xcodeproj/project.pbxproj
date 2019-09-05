@@ -252,13 +252,13 @@
 		70F67736231E45C500611CFF /* AKPageController */ = {
 			isa = PBXGroup;
 			children = (
+				70F6776A231E466D00611CFF /* BeautyKit */,
 				70F67769231E463300611CFF /* AKPageViewController */,
-				70F67737231E45C500611CFF /* AppDelegate.h */,
 				70F677DC231E4B5E00611CFF /* PrefixHeader.pch */,
+				70F67737231E45C500611CFF /* AppDelegate.h */,
 				70F67738231E45C500611CFF /* AppDelegate.m */,
 				70F6773A231E45C500611CFF /* ViewController.h */,
 				70F6773B231E45C500611CFF /* ViewController.m */,
-				70F6776A231E466D00611CFF /* BeautyKit */,
 				70F6773D231E45C500611CFF /* Main.storyboard */,
 				70F67740231E45C800611CFF /* Assets.xcassets */,
 				70F67742231E45C800611CFF /* LaunchScreen.storyboard */,

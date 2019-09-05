@@ -39,14 +39,17 @@
             m.unselectedColor = @"#FFFFFFCC";
             
             if ([s isEqualToString:@"小欢喜"]) {
+                /** 选中的颜色 */
                 m.selectedColor = @"#5B8C3F";
+                /** 选中时候 其它频道的颜色 */
                 m.unselectedColor = @"#EFEF67CC";
                 //                        m.picSize = @"8";
             }
-            
+            /** 设置默认选中背景图 */
             m.columOfBgImg = @"";
             [marr addObject:m];
         }
+        
         [sM defaultSetup];
         sM.channelList = marr.copy;
     }
