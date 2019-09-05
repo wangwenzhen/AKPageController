@@ -27,12 +27,22 @@ pod 'SDWebImage/GIF', '4.4.6'
 
 
 6.导入的全局头文件参考  PrefixHeader.pch 文件 如下
+
 #import <UIKit/UIKit.h>
+
 #import <Foundation/Foundation.h>
+
 #import "BeautyKitHeader.h"
+
 #import <YYCategories/YYCategories.h>
+
 #import <Masonry/Masonry.h>
+
 #import <ReactiveObjC/ReactiveObjC.h>
+
 #import <ReactiveObjC/RACEXTScope.h>
+
 #import <SDWebImage/UIImageView+WebCache.h>
+
 #import <SDWebImage/FLAnimatedImageView+WebCache.h>
+
