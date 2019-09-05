@@ -30,7 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak) __kindof UIViewController <AKHomeMainViewDelegate> *pageDelegate;
 @property (nonatomic,strong) id channelSquenceModel;
 @property (nonatomic,strong) RACSubject *scringSubject;
-
+/** 必须使用 才会有数据*/
+- (void)configureData;
 
 - (void)scroToPage:(NSInteger)page;
 @end

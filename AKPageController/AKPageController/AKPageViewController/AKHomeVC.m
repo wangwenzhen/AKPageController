@@ -270,13 +270,15 @@
                 @strongify(self)
                 if (self.preIndex != x.integerValue) {
                     
-                    AKHomeBaseVC *vc = (AKHomeBaseVC *)self.childViewControllers[self.preIndex];
-                    self.preIndex = x.integerValue;
-                    if ([vc respondsToSelector:@selector(akViewDisAppear)]) {
-                        
-                        dispatch_async_on_main_queue(^{
-                            [vc akViewDisAppear];
-                        });
+                    if (self.preIndex < self.childViewControllers.count) {
+                        AKHomeBaseVC *vc = (AKHomeBaseVC *)self.childViewControllers[self.preIndex];
+                        self.preIndex = x.integerValue;
+                        if ([vc respondsToSelector:@selector(akViewDisAppear)]) {
+                            
+                            dispatch_async_on_main_queue(^{
+                                [vc akViewDisAppear];
+                            });
+                        }
                     }
                 }
                 
@@ -291,12 +293,15 @@
 //                    [self.searchBar hiddenExtraButton:YES];
 //                }
                 
-                AKHomeBaseVC *vc = (AKHomeBaseVC *)self.childViewControllers[x.integerValue];
-                if ([vc respondsToSelector:@selector(akViewAppear)]) {
-                    dispatch_async_on_main_queue(^{
-                        [vc akViewAppear];
-                    });
+                if (x.integerValue < self.childViewControllers.count) {
+                    AKHomeBaseVC *vc = (AKHomeBaseVC *)self.childViewControllers[x.integerValue];
+                    if ([vc respondsToSelector:@selector(akViewAppear)]) {
+                        dispatch_async_on_main_queue(^{
+                            [vc akViewAppear];
+                        });
+                    }
                 }
+                
             }];
         }];
     }

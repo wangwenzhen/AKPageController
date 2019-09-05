@@ -34,7 +34,6 @@
 
 - (void)setChannelSquenceModel:(id)channelSquenceModel{
     _channelSquenceModel = channelSquenceModel;
-    [self configureData];
 }
 
 - (void)configureData{

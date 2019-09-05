@@ -54,8 +54,8 @@
     cSquenceView.model = sM;
     
     self.channelModel = sM;
-    homeView.channelSquenceModel = sM;
-    
+//    homeView.channelSquenceModel = sM;
+    [homeView configureData];
     [cSquenceView scroToChannelSquenceIndex:0];//后台数据传来 自动选中0
 }
 /**
