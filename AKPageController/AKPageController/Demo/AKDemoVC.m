@@ -37,6 +37,7 @@
             AKChannelListModel *m = AKChannelListModel.new;
             m.name = s;
             m.unselectedColor = @"#FFFFFFCC";
+            m.columOfBgImg = @"";
             
             if ([s isEqualToString:@"小欢喜"]) {
                 /** 选中的颜色 */
@@ -44,9 +45,16 @@
                 /** 选中时候 其它频道的颜色 */
                 m.unselectedColor = @"#EFEF67CC";
                 //                        m.picSize = @"8";
+                m.columOfBgImg = @"privacyTop";
+            } else if ([s isEqualToString:@"电影"]) {
+                m.selectedChannelIconUrl = @"big_collection_sel";
+                m.selectedPicSize = @"48*48";
+            } else if ([s isEqualToString:@"电视剧"]) {
+                m.channelIconUrl = @"ak_ sel_praise";
+                m.picSize = @"17*17";
             }
             /** 设置默认选中背景图 */
-            m.columOfBgImg = @"";
+            
             [marr addObject:m];
         }
         
@@ -66,7 +74,6 @@
  
  @param homeView 底部滚动视图
  @param cSquenceView 顶部滚动视图
- @param topTabbarBGView 顶部背景滚动图
  */
 //- (void)resetLayoutHomeMainView:(AKHomeMainView *)homeView
 //                   cSquenceView:(AKChannelSquenceView *)cSquenceView{

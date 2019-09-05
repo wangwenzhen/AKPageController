@@ -33,11 +33,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *fontFamily;
 /** 未选中图 */
 @property (nonatomic,copy) NSString *channelIconUrl;
-/** 未选中大小 */
+/** 未选图中大小 */
 @property (nonatomic,copy) NSString *picSize;
 /** 选中远程图 */
 @property (nonatomic,copy) NSString *selectedChannelIconUrl;
-/** 选中大小 */
+/** 选中图片大小   w*h  */
 @property (nonatomic,copy) NSString *selectedPicSize;
 @property (nonatomic,copy) NSString *platformType;
 @property (nonatomic,copy) NSString *searchWord;

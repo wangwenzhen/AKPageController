@@ -69,7 +69,11 @@ static NSString * const AKItemColorTransfromNoti = @"_AKItemColorTransfromNoti";
                 make.size.mas_equalTo(CGSizeMake([d.firstObject floatValue], [d.lastObject floatValue]));
             }];
             
-            [_imgV sd_setImageLineAniWithURL:[NSURL URLWithString:model.selectedChannelIconUrl] placeholderImage:nil];
+            if ([model.selectedChannelIconUrl hasPrefix:@"http"]) {
+                [_imgV sd_setImageLineAniWithURL:[NSURL URLWithString:model.selectedChannelIconUrl] placeholderImage:nil];
+            } else {
+                _imgV.image = [UIImage imageNamed:model.selectedChannelIconUrl];
+            }
             
         } else {
             _sequenceLb.hidden = NO;
@@ -98,7 +102,11 @@ static NSString * const AKItemColorTransfromNoti = @"_AKItemColorTransfromNoti";
                 make.size.mas_equalTo(CGSizeMake([d.firstObject floatValue]/2., [d.lastObject floatValue]/2.));
             }];
             
-            [_imgV sd_setImageLineAniWithURL:[NSURL URLWithString:model.channelIconUrl] placeholderImage:nil];
+            if ([model.channelIconUrl hasPrefix:@"http"]) {
+                [_imgV sd_setImageLineAniWithURL:[NSURL URLWithString:model.channelIconUrl] placeholderImage:nil];
+            } else {
+                _imgV.image = [UIImage imageNamed:model.channelIconUrl];
+            }
         } else {
             _imgV.hidden = YES;
             _sequenceLb.hidden = NO;
@@ -683,7 +691,6 @@ static NSString * const AKItemColorTransfromNoti = @"_AKItemColorTransfromNoti";
 //    }
     
     
-    
     for (AKChannelListModel *model in self.model.channelList) {
         model.displayUnselColor = self.model.channelList[index].unselectedColor;
     }
@@ -936,7 +943,7 @@ static NSString * const AKItemColorTransfromNoti = @"_AKItemColorTransfromNoti";
     _topTabbarBGView = [AKTopTabbarBGView lw_createAddToView:self
                                                  blockConfig:^(__kindof AKTopTabbarBGView *v) {
                                                      
-                                                     v.frame = CGRectMake(0, -[NSObject union_statusBarHeight], self.union_w, 46. + [NSObject union_statusBarHeight]);
+                                                     v.frame = CGRectMake(0, -[NSObject union_statusBarHeight], self.union_w, self.union_h + [NSObject union_statusBarHeight]);
                                                      
                                                      [self sendSubviewToBack:v];
                                                  }];

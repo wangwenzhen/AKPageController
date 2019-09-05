@@ -227,6 +227,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		70E93EE0232110B30071EE7C /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				70F677FE231F8DE800611CFF /* AKDemoVC.h */,
+				70F677FF231F8DE800611CFF /* AKDemoVC.m */,
+				70F677FA231F647300611CFF /* AKCommonVC.h */,
+				70F677F9231F647300611CFF /* AKCommonVC.m */,
+				70F677FB231F647300611CFF /* AKFeaturedVC.h */,
+				70F677F8231F647200611CFF /* AKFeaturedVC.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		70F6772B231E45C500611CFF = {
 			isa = PBXGroup;
 			children = (
@@ -262,12 +275,7 @@
 				70F6773D231E45C500611CFF /* Main.storyboard */,
 				70F67740231E45C800611CFF /* Assets.xcassets */,
 				70F67742231E45C800611CFF /* LaunchScreen.storyboard */,
-				70F677FE231F8DE800611CFF /* AKDemoVC.h */,
-				70F677FF231F8DE800611CFF /* AKDemoVC.m */,
-				70F677FA231F647300611CFF /* AKCommonVC.h */,
-				70F677F9231F647300611CFF /* AKCommonVC.m */,
-				70F677FB231F647300611CFF /* AKFeaturedVC.h */,
-				70F677F8231F647200611CFF /* AKFeaturedVC.m */,
+				70E93EE0232110B30071EE7C /* Demo */,
 				70F67745231E45C800611CFF /* Info.plist */,
 				70F67746231E45C800611CFF /* main.m */,
 			);
