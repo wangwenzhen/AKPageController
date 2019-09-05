@@ -653,8 +653,7 @@ static NSString * const AKItemColorTransfromNoti = @"_AKItemColorTransfromNoti";
     
     NSInteger num = [self.collectionView numberOfItemsInSection:0];
     if (num - 1 >= index) {
-        
-
+    
         dispatch_async(dispatch_get_main_queue(), ^{
             
             //触发滚动
