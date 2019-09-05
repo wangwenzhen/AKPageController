@@ -11,13 +11,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import <YYModel/YYModel.h>
 #import "BeautyKitHeader.h"
 #import <YYCategories/YYCategories.h>
 #import <Masonry/Masonry.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <ReactiveObjC/RACEXTScope.h>
-#import <MBProgressHUD.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/FLAnimatedImageView+WebCache.h>
 #endif /* PrefixHeader_pch */
