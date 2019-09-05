@@ -227,7 +227,7 @@
             [self.view addSubview:_mainView];
             [self.view sendSubviewToBack:_mainView];
 
-            _mainView.frame = CGRectMake(0, CGRectGetMaxY(self.cSquenceView.frame) , UNION_SCREEN_WIDTH, UNION_SCREEN_HEIGHT - self.cSquenceView.union_y - self.cSquenceView.union_h - self.tabBarController.tabBar.union_h);
+            _mainView.frame = CGRectMake(0, CGRectGetMaxY(self.cSquenceView.frame) , self.view.union_w, UNION_SCREEN_HEIGHT - self.cSquenceView.union_y - self.cSquenceView.union_h - self.tabBarController.tabBar.union_h);
         }
         _mainView.pageDelegate = self;
     }
@@ -250,7 +250,7 @@
              if ([self respondsToSelector:@selector(resetLayoutHomeMainView:cSquenceView:)]) {
                  [self resetLayoutHomeMainView:nil cSquenceView:headV];
              } else {
-                 headV.frame = CGRectMake(0, [NSObject union_statusBarHeight], UNION_SCREEN_WIDTH, 46);
+                 headV.frame = CGRectMake(0, [NSObject union_statusBarHeight], self.view.union_w, 46);
              }
 
             @weakify(self)

@@ -31,7 +31,7 @@
 
 -(void)setChannelSquenceModel:(AKChannelSquenceModel *)channelSquenceModel {
     _channelSquenceModel = channelSquenceModel;
-    _scroV.contentSize = CGSizeMake(_channelSquenceModel.channelList.count * UNION_SCREEN_WIDTH, _bgH + [NSObject union_statusBarHeight]);
+    _scroV.contentSize = CGSizeMake(_channelSquenceModel.channelList.count * self.union_w, _bgH + [NSObject union_statusBarHeight]);
     [self configureData];
     
 }
@@ -51,7 +51,7 @@
            [self.scroV addSubview:v];
             v.contentMode = UIViewContentModeScaleToFill;
             v.clipsToBounds = YES;
-            v.frame = CGRectMake(UNION_SCREEN_WIDTH * i, 0, UNION_SCREEN_WIDTH, self.bgH + [NSObject union_statusBarHeight]);
+            v.frame = CGRectMake(self.union_w * i, 0, self.union_w, self.bgH + [NSObject union_statusBarHeight]);
             if ([model.columOfBgImg hasPrefix:@"http"]) {
                 [v sd_setImageWithURL:[NSURL URLWithString:model.columOfBgImg] placeholderImage:nil];
             } else {

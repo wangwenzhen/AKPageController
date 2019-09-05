@@ -389,7 +389,6 @@ static NSString * const AKItemColorTransfromNoti = @"_AKItemColorTransfromNoti";
 }
 - (void)scroToChannelSquenceIndex:(NSInteger)idx{
     [self selFromIndex:invalidIndex ToIndex:idx sendSingle:YES];
-
 }
 
 
@@ -663,7 +662,7 @@ static NSString * const AKItemColorTransfromNoti = @"_AKItemColorTransfromNoti";
            
             if (isSend) {
                 [self.scroDidSubject sendNext:@(index)];
-                [self.topTabbarBGView scrollWithOffsetX:index*UNION_SCREEN_WIDTH];
+                [self.topTabbarBGView scrollWithOffsetX:index*self.union_w];
             }
             
             
@@ -689,7 +688,7 @@ static NSString * const AKItemColorTransfromNoti = @"_AKItemColorTransfromNoti";
     for (AKChannelListModel *model in self.model.channelList) {
         model.displayUnselColor = self.model.channelList[index].unselectedColor;
     }
-    [self.topTabbarBGView scrollWithOffsetX:index*UNION_SCREEN_WIDTH];
+    [self.topTabbarBGView scrollWithOffsetX:index*self.union_w];
 }
 
 
@@ -938,7 +937,7 @@ static NSString * const AKItemColorTransfromNoti = @"_AKItemColorTransfromNoti";
     _topTabbarBGView = [AKTopTabbarBGView lw_createAddToView:self
                                                  blockConfig:^(__kindof AKTopTabbarBGView *v) {
                                                      
-                                                     v.frame = CGRectMake(0, -[NSObject union_statusBarHeight], UNION_SCREEN_WIDTH, 46. + [NSObject union_statusBarHeight]);
+                                                     v.frame = CGRectMake(0, -[NSObject union_statusBarHeight], self.union_w, 46. + [NSObject union_statusBarHeight]);
                                                      
                                                      [self sendSubviewToBack:v];
                                                  }];

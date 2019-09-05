@@ -60,7 +60,7 @@
         NSInteger subVC_count =  [(AKChannelSquenceModel *)_channelSquenceModel channelList].count;
         for (int i =0 ; i < subVC_count; i++) {
             AKHomeBaseVC *vc = [[AKHomeBaseVC alloc] initWithModel:[(AKChannelSquenceModel *)_channelSquenceModel channelList][i]];
-            vc.view.backgroundColor = [UIColor union_colorWithR:i*10 + 100 G:i*10 + 100 B:i*10 + 100];
+            
             vc.idx = i;
             [_pageDelegate addChildViewController:vc];
             [marr addObject:vc.view];
@@ -77,10 +77,10 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     [self layoutIfNeeded];
-    _scroV.contentSize = CGSizeMake(_pageDelegate.childViewControllers.count * UNION_SCREEN_WIDTH, self.union_h);
+    _scroV.contentSize = CGSizeMake(_pageDelegate.childViewControllers.count * self.union_w, self.union_h);
     for (int i = 0; i < _containViews.count; i++) {
         UIView *v = _containViews[i];
-        v.frame = CGRectMake(UNION_SCREEN_WIDTH * i, 0, UNION_SCREEN_WIDTH, self.union_h);
+        v.frame = CGRectMake(self.union_w * i, 0, self.union_w, self.union_h);
     }
 }
 
@@ -100,7 +100,7 @@
     if (page== 0 && _scroV.contentOffset.x == 0) {
         [self.scroV setContentOffset:CGPointMake(1,0) animated:NO];
     }
-    [self.scroV setContentOffset:CGPointMake(page * UNION_SCREEN_WIDTH,0) animated:NO];
+    [self.scroV setContentOffset:CGPointMake(page * self.union_w,0) animated:NO];
 
 }
 
@@ -230,7 +230,7 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     _preOffsetX = scrollView.contentOffset.x;
-    NSInteger page = scrollView.contentOffset.x / UNION_SCREEN_WIDTH;
+    NSInteger page = scrollView.contentOffset.x / self.union_w;
     KCLog(@"Dragging a ---index  %ld",(long)page);
     _prePage = page;
 }

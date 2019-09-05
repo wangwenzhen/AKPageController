@@ -56,7 +56,7 @@
     self.channelModel = sM;
     homeView.channelSquenceModel = sM;
     
-    [cSquenceView scroToChannelSquenceIndex:3];//后台数据传来 自动选中0
+    [cSquenceView scroToChannelSquenceIndex:0];//后台数据传来 自动选中0
 }
 /**
  重新布局
