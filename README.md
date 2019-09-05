@@ -16,7 +16,11 @@
 5.集成pod
 
 pod 'YYCategories','1.0.4'
+
 pod 'ReactiveObjC','3.1.1'
+
 pod 'Masonry','1.1.0'
+
 pod 'SDWebImage','4.4.6'     
+
 pod 'SDWebImage/GIF', '4.4.6'
